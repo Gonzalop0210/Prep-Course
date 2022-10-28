@@ -170,10 +170,10 @@ function esPositivo(numero) {
   //Si el número es positivo, devolver ---> "Es positivo"
   //Si el número es negativo, devolver ---> "Es negativo"
   //Si el número es 0, devuelve false
-  if (numero > 0) {
-    return "Es Positivo";
-  } else if (numero < 0) {
-    return "Es Negativo";
+  if (numero >= 1) {
+    return "Es positivo";
+  } else if (numero <= -1) {
+    return "Es negativo";
   } else {
     return false;
   }
@@ -237,9 +237,11 @@ function esVocal(letra){
   //Escribe tu código aquí
   if (letra.length > 1) {
     return "Dato incorrecto";
-  } else if (letra == "a" || letra == "e" || letra == "i" || letra == "o" || letra == "u") {
+  } 
+  if (letra === "a" || letra === "e" || letra === "i" || letra === "o" || letra === "u") {
     return "Es vocal";
-  } else (letra != "a" || letra != "e" || letra != "i" || letra != "o" || letra != "u") {
+  } 
+  else (letra !="a" || letra !="e" || letra !="i" || letra !="o" || letra !="u");{
     return "Dato incorrecto";
   }
 }
