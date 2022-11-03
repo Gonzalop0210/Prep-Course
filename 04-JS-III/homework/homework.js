@@ -152,10 +152,10 @@ function diaDeLaSemana(numeroDeDia) {
   //Realiza una función que dado el número del día de la semana, retorne: Es fin de semana
   //si el día corresponde a Sábado o Domingo y “Es dia Laboral” en caso contrario. 
   //Escribe tu código aquí   
-  for (var i = 1; i <= 7; i++) {
-    if (i == 7 && i == 1) {
-      return "Fin de semana";
-    }
+  if (numeroDeDia === 7 || numeroDeDia === 1) {
+    return "Es fin de semana";
+  } else {
+    return "Es dia Laboral";
   }
 } 
 
@@ -164,7 +164,12 @@ function empiezaConNueve(n) {
   //Desarrolle una función que recibe como parámetro un número entero n. Debe retornar true si el entero 
   //inicia con 9 y false en otro caso.
   //Escribe tu código aquí
-  
+  let numero = n.toString()
+  if (numero.charAt(0) === '9'){
+      return true;
+  } else {
+      return false;
+  }
 }
 
 
@@ -172,7 +177,12 @@ function todosIguales(arreglo) {
   //Escriba la función todosIguales, que indique si todos los elementos de un arreglo son iguales:
   //retornar true, caso contrario retornar false.
   //Escribe tu código aquí  
-  
+  for (var i = 0; i < arreglo.length-1; i++) {
+    if (arreglo[i] != arreglo[i+1]) {
+      return false;
+    }
+  }
+  return true;
 } 
 
 
