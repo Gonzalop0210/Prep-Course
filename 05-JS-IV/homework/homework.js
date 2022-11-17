@@ -54,21 +54,12 @@ function nuevoUsuario (nombre, email, password) {
   // Crea un nuevo objeto con las propiedades coincidiendo con los argumentos que se pasan a la función
   // Devuelve el objeto
   // Tu código:
-<<<<<<< HEAD
   let nuevoObjeto = {
-=======
-  let newObject = {
->>>>>>> 48538186b951893f3efb7083a19f044047ffd1d0
     nombre: nombre,
     email: email,
     password: password
   }
-<<<<<<< HEAD
   return nuevoObjeto;
-=======
-
-  return newObject;
->>>>>>> 48538186b951893f3efb7083a19f044047ffd1d0
 }
 
 function tieneEmail (usuario) {
@@ -99,11 +90,7 @@ function verificarPassword (usuario, password) {
   // Devuelve "true" si coinciden
   // De lo contrario, devuelve "false"
   // Tu código:
-<<<<<<< HEAD
   if (usuario.password == password) {
-=======
-  if (password == usuario.password) {
->>>>>>> 48538186b951893f3efb7083a19f044047ffd1d0
     return true;
   } else {
     return false;
@@ -134,13 +121,9 @@ function pasarUsuarioAPremium (usuarios) {
   // Devuelve el array de usuarios
   // Tu código:
   for (let i = 0; i < usuarios.length; i++) {
-<<<<<<< HEAD
     if (usuarios[i]) {
       usuarios[i].esPremium = true;
     }
-=======
-    usuarios[i].esPremium = true;
->>>>>>> 48538186b951893f3efb7083a19f044047ffd1d0
   }
   return usuarios;
 }
@@ -152,21 +135,11 @@ function sumarLikesDeUsuario (usuario) {
   // Suma todos los likes de todos los objetos "post"
   // Devuelve la suma
   // Tu código:
-<<<<<<< HEAD
   var cont = 0;
-  var total = 0;
   for (let i = 0; i < usuario.posts.length; i++) {
     cont += usuario.posts[i].likes;
   }
   return cont;
-=======
-  var usar = usuario.posts;
-  var total = 0;
-  for (let i = 0; i < usar.length; i++) {
-    total += usar[i].likes;
-  }
-  return total;
->>>>>>> 48538186b951893f3efb7083a19f044047ffd1d0
 }
 
 function agregarMetodoCalculoDescuento (producto) {
@@ -179,22 +152,12 @@ function agregarMetodoCalculoDescuento (producto) {
   // producto.porcentajeDeDescuento -> 0.2 (o simplemente ".2")
   // producto.calcularPrecioDescuento() -> 20 - (20 * 0.2)
   // Tu código:
-<<<<<<< HEAD
   producto["calcularPrecioDescuento"] =  function () {
     let rpta = 0;
     rpta = producto.precio - (producto.precio * producto.porcentajeDeDescuento);
     return rpta;
   }
-  return producto;
-=======
-  producto.calcularPrecioDescuento = function() {
-    let desc = 0;
-    desc = producto.precio - (producto.precio * producto.porcentajeDeDescuento);
-    return desc;
-  };
-  return producto;
-  
->>>>>>> 48538186b951893f3efb7083a19f044047ffd1d0
+  return producto
 }
 
 // No modificar nada debajo de esta línea
